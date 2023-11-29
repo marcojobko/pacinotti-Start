@@ -1,32 +1,44 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import Education from "./components/Education.jsx";
 
 //Dichiarazione Styled Components:
-const Div = styled.div`
-  margin: 100px auto;
-  padding: 50px;
-  background-color: #66A182;
-  border: 2px solid #2E4057;
-  max-width: 700px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-`;
 
 const H1 = styled.h1`
-  color: #2E4057;
+  color: rgb(29, 29, 29);
   margin: auto;
-  text-align: center;
+  text-align: left;
   font-size: 70px;
+  font: Futura;
+`;
+const Header = styled.header`
+  background-color: rgb(29, 29, 29);
+  height: 85px;
+  color: white;
+`;
+
+const Img = styled.img`
+  height: 250px;
+`;
+
+const Div = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 const App = () => {
-
-  return(
-    <Div>
-      <H1>Hello world</H1>
-    </Div>
-  )
+  return (
+    <div>
+      <Header></Header>
+      <Div>
+        <H1>
+          <b>Marco Melis</b>
+        </H1>
+        <Img src="https://cdn.pixabay.com/photo/2017/10/06/23/21/tree-2824979_960_720.png" />
+      </Div>
+      <Education />
+    </div>
+  );
 };
 
 export default App;
